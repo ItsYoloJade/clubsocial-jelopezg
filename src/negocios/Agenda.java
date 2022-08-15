@@ -1,15 +1,13 @@
 package negocios;
-import java.util.Collection;
 import java.util.LinkedList;
 
 import datos.Empleado;
-import datos.Miembro;
 import ui.Interfaz;
 
 public class Agenda {
 public static void main(String[] args)  {
 		
-		Interfaz i1 = new Interfaz();
+		Interfaz i1= new Interfaz();
 		i1.lectura();
 	}
 	
@@ -23,6 +21,7 @@ public static void main(String[] args)  {
 		 int NumEmpleado = empleado.getNumEmpleado();
 		 int FechaIngreso = empleado.getFechaIngreso();
 		 String Puesto = empleado.getPuesto();
+		 
 		lista.add(empleado);
 		return true;
 		
@@ -37,32 +36,16 @@ public static void main(String[] args)  {
 	}
 
 	
-	LinkedList<Miembro> lista2 = new LinkedList <Miembro>();
-
-	public boolean add(Miembro miembro) {
-		char[] letras= miembro.getNombre().toCharArray();
-		 int Birthdate= miembro.getBirthdate();
-		 int edad = miembro.getEdad();
-		 String genero = miembro.getGenero();
-		 int NumMembresia = miembro.getNumMembresia();
-		 int EmisionMembresia = miembro.getEmisionMembresia();
-		
-		 lista2.add(miembro);
-		return true;
-
-}
-
-	public LinkedList<Miembro> getLista2() {
-		return lista2;
-	}
-
-	public void setLista2(LinkedList<Miembro> lista2) {
-		this.lista2 = lista2;
-	}
-
+	
 	@Override
 	public String toString() {
-		return "Lista de Empleados" + lista + "Lista de Miembros" + lista2; 
+		return 
+				"----------------------\n"
+				+ "Lista de Empleados\n" 
+				+ getLista() + "\n"	;
 	}
+
+
+	
 
 }

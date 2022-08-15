@@ -39,9 +39,16 @@ public class Miembro extends Persona  {
 
 	@Override
 	public String toString() {
-		return "Miembro [NumMembresia=" + NumMembresia + ", EmisionMembresia=" + EmisionMembresia + ", VenciMembresia="
-				+ VenciMembresia + "]";
+		return "----------------------------------------------------\n"
+			+ super.toString() + "\n"
+			+ "Numero de Membresia= " + getNumMembresia() + "\n"
+			+ "Emision de Membresia= "+ getEmisionMembresia() + "\n"
+			+ "Vencimiento de Membresia= " + getVenciMembresia() + "\n"
+			+"-------------------------------------------------------\n";
+			
 	}
+
+	
 	
 	
 	

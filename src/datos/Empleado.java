@@ -40,11 +40,20 @@ public class Empleado extends Persona{
 		Puesto = puesto;
 	}
 
+
 	@Override
 	public String toString() {
-		return "Empleado [NumEmpleado=" + NumEmpleado + ", FechaIngreso=" + FechaIngreso + ", Puesto=" + Puesto + "]";
+		return "---------------------------------------------\n"
+			+ super.toString()+"\n"
+	        + "Numero de Empleado= " + getNumEmpleado() + "\n"
+			+ "Fecha de Ingreso= " + getFechaIngreso() +"\n"
+			+ "Puesto= " + getPuesto() + "\n"
+			+"-------------------------------------------------";
 	}
 
+
+	
+	
 	
 	
 	

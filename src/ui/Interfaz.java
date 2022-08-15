@@ -1,18 +1,17 @@
 package ui;
-
 import java.util.Scanner;
-
 import datos.Empleado;
 import datos.Miembro;
 import negocios.Agenda;
+import negocios.Agenda2;
 public class Interfaz {
 
 	static Scanner entrada= new Scanner (System.in);
 	static  Agenda lista = new Agenda();
+	static  Agenda2 lista2 = new Agenda2();
 		
 		public static void lectura() {
-			System.out.println("Bienvenido");
-			
+
 			imprimirMenu();
 		}
 	       private static void validarEmpleado()  {
@@ -34,7 +33,7 @@ public class Interfaz {
 	       empleado.setPuesto(entrada.nextLine());
 	       
 	       if(lista.add(empleado)== true) {
-	    	   System.out.println("El empleado a sido registrado exitosamente");
+	    	   System.out.println("El empleado a sido registrado exitosamente\n");
 	       } else {
 	    	   System.out.println("Error en el ingreso de los datos");
 	       }
@@ -47,6 +46,7 @@ public class Interfaz {
 	    }   
 	    
 	    private static void validarMiembro()  {
+	    	
 	    	Miembro miembro = new Miembro ();
 	    	System.out.println("Ingresar nombre");
 	 	   miembro.setNombre(entrada.next());
@@ -60,19 +60,18 @@ public class Interfaz {
 	        miembro.setNumMembresia(entrada.nextInt());
 	        System.out.println("Ingresar fecha de emision de la membresia");
 	        miembro.setEmisionMembresia(entrada.nextInt());
-	        System.out.println("La fecha de vencimiento de la membresia"
-	        		+ "es de 2 años exactos a partir de la fecha de emision");
+	        System.out.println("La fecha de vencimiento de la membresia es de 2 años exactos a partir de la fecha de emision\n");
 	        
-	        if(lista.add(miembro)== true) {
-	     	   System.out.println("El miembro a sido registrado exitosamente");
+	        if(lista2.add(miembro)== true) {
+	     	   System.out.println("El miembro a sido registrado exitosamente\n");
 	        } else {
-	     	   System.out.println("Error en el ingreso de los datos");
+	     	   System.out.println("Error en el ingreso de los datos\n");
 	        }
 	        imprimirMenu(); 
 	    }
 	    
 	    private static void mostrarMiembro() {
-	    	System.out.println(lista);
+	    	System.out.println(lista2);
 	    	imprimirMenu();
 	    }   
 	     
@@ -86,7 +85,7 @@ public class Interfaz {
 			System.out.println("1. Empleados");
 			System.out.println("2. Miembros");
 			System.out.println("3. Salir");
-			System.out.println("---------------------------------------");
+			System.out.println("---------------------------------------\n");
 			int opcion= entrada.nextInt(); 
 			
 			switch (opcion) {
@@ -129,7 +128,7 @@ public class Interfaz {
 				case 3: salir();
 				    break;
 			
-			default: System.out.println("Ha ingresado una opcion invalida");
+			default: System.out.println("Ha ingresado una opcion invalida\n");
 			imprimirMenu();
 				break;
 			}
